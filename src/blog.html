@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="p-5 bg-gray-100">
+    <header class="max-width-wrapper rounded-md bg-white flex items-center p-4">
+      <a href="http://127.0.0.1:5500/src/index.html">
+        <img src="assets/logo.png" alt="Logo" class="w-[200px]" />
+      </a>
+      <a href="index.html" class="btn ml-auto" id="back-to-desk-button">
+        Go to Desk
+      </a>
+    </header>
+    <main class="mt-4">
+      <h1 class="font-bold text-2xl text-center">Blogs</h1>
+      <section class="mt-4">
+        <ul class="space-y-5">
+          <li class="rounded-md bg-white space-y-4 p-4">
+            <h1 class="font-bold text-lg">
+              Question-1: What are the different ways to select an element in
+              the DOM?
+            </h1>
+            <span
+              class="w-full block border-gray-200 border border-dashed"
+            ></span>
+            <p>
+              There are few ways of selecting an element in the DOM. The are
+              document.getElementById(), document.getElementsByClassName(),
+              document.querySelector(), document.querySelectorAll()
+            </p>
+          </li>
+          <li class="rounded-md bg-white space-y-4 p-4">
+            <h1 class="font-bold text-lg">
+              Question-2: What is the difference between innerHTML, innerText,
+              and textContent?
+            </h1>
+            <span
+              class="w-full block border-gray-200 border border-dashed"
+            ></span>
+            <p>
+              innerHTML retrieves HTML content including tags, innerText returns
+              visible text only, and textContent gives all text content,
+              including hidden elements.
+            </p>
+          </li>
+
+          <li class="rounded-md bg-white space-y-4 p-4">
+            <h1 class="font-bold text-lg">
+              Question-3: What is event delegation in the DOM?
+            </h1>
+            <span
+              class="w-full block border-gray-200 border border-dashed"
+            ></span>
+            <p>
+              Event delegation is when an event listener is added to a parent
+              element, which listens for events on child elements, improving
+              efficiency.
+            </p>
+          </li>
+
+          <li class="rounded-md bg-white space-y-4 p-4">
+            <h1 class="font-bold text-lg">
+              Question-4: What is event bubbling in the DOM?
+            </h1>
+            <span
+              class="w-full block border-gray-200 border border-dashed"
+            ></span>
+            <p>
+              Event bubbling is when an event starts at the target element and
+              bubbles up to its parent elements in the DOM hierarchy.
+            </p>
+          </li>
+
+          <li class="rounded-md bg-white space-y-4 p-4">
+            <h1 class="font-bold text-lg">
+              Question-5: How do you create, add, and remove elements using
+              JavaScript?
+            </h1>
+            <span
+              class="w-full block border-gray-200 border border-dashed"
+            ></span>
+            <p>
+              To create element we can use document.createElement(), to add
+              element we can use appendChild(), and to remove element we can use
+              removeChild()
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

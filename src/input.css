@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer base {
+}
+
+@layer components {
+  .max-width-wrapper {
+    @apply max-w-[1280px] mx-auto;
+  }
+  .btn {
+    @apply cursor-pointer bg-blue-600 text-white rounded-md h-10 px-4 flex items-center text-sm font-medium;
+  }
+}

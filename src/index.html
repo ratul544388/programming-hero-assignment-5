@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="output.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="p-5 bg-gray-100">
+    <header class="max-width-wrapper rounded-md bg-white flex items-center p-4">
+      <a href="http://127.0.0.1:5500/src/index.html">
+        <img src="assets/logo.png" alt="Logo" class="w-[200px]" />
+      </a>
+      <div class="ml-auto flex items-center gap-6">
+        <div
+          class="bg-gray-100 rounded-full py-1.5 p-3 font-bold gap-2 flex items-center"
+        >
+          <img src="assets/checkbox.png" alt="Check box" class="w-4" />
+          <span id="test-completed-count">0</span>
+        </div>
+        <button
+          id="change-theme-button"
+          class="cursor-pointer"
+          aria-label="Change Theme"
+        >
+          <img
+            src="assets/theme-btn.png"
+            alt="Change theme button"
+            class="w-8"
+          />
+        </button>
+      </div>
+    </header>
+    <main class="max-width-wrapper mt-5 rounded-md flex gap-4">
+      <section class="p-4 w-full space-y-4 rounded-md bg-white">
+        <section class="flex lg:flex-row flex-col gap-4">
+          <div class="bg-gray-100 items-center flex gap-5 p-4 rounded-md">
+            <div class="bg-white h-fit p-3 rounded-full">
+              <img src="assets/checkbox.png" alt="Check box" class="w-5" />
+            </div>
+            <div>
+              <p class="text-sm leading-4">Task Assigned</p>
+              <span id="task-assigned-count" class="font-bold">06</span>
+            </div>
+          </div>
+          <a
+            href="blog.html"
+            class="bg-gradient-to-r from-blue-600 to-blue-400 rounded-md p-4 flex items-center gap-4 flex-1"
+          >
+            <img src="assets/board.png" alt="board" class="w-12" />
+            <p class="text-white">Discover Something <br />New Today!</p>
+          </a>
+          <div class="rounded-md p-3 bg-gray-100 flex items-center gap-3">
+            <div class="p-4 rounded-full bg-white">
+              <img src="assets/calender.png" alt="Calender" class="w-5" />
+            </div>
+            <div>
+              <p id="day-of-the-week"></p>
+              <p id="current-date" class="font-bold"></p>
+            </div>
+          </div>
+        </section>
+        <section class="">
+          <ul class="grid lg:grid-cols-2 xl:grid-cols-3 gap-5">
+            <li class="bg-gray-100 p-4 space-y-4">
+              <div class="px-3 py-2 rounded-md bg-white text-sm w-fit">
+                ShopEase
+              </div>
+              <h3 class="font-semibold text-xl line-clamp-1">
+                Fix Mobile Button Issue
+              </h3>
+              <div
+                class="px-3 py-1.5 overflow-hidden bg-white rounded-md line-clamp-2"
+              >
+                Debug using Chrome DevTools, check for overflow issues, and
+                ensure responsiveness across various devices.
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xs">Deadline</span>
+                  <p class="font-medium">21 March 2025</p>
+                </div>
+                <button
+                  class="btn data-[complete=true]:bg-blue-600/50 data-[complete=true]:pointer-events-none"
+                  data-complete="false"
+                >
+                  Completed
+                </button>
+              </div>
+            </li>
+            <li class="bg-gray-100 p-4 space-y-4">
+              <div class="px-3 py-2 rounded-md bg-white text-sm w-fit">
+                CodeCrafters
+              </div>
+              <h3 class="font-semibold text-xl line-clamp-1">
+                Implement User Authentication
+              </h3>
+              <div class="px-3 py-1.5 bg-white rounded-md line-clamp-2">
+                Develop a secure user authentication system using JWT and OAuth2
+                protocols.
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xs">Deadline</span>
+                  <p class="font-medium">25 March 2025</p>
+                </div>
+                <button
+                  class="btn data-[complete=true]:bg-blue-600/50 data-[complete=true]:pointer-events-none"
+                  data-complete="false"
+                >
+                  Completed
+                </button>
+              </div>
+            </li>
+
+            <li class="bg-gray-100 p-4 space-y-4">
+              <div class="px-3 py-2 rounded-md bg-white text-sm w-fit">
+                DataMinds
+              </div>
+              <h3 class="font-semibold text-xl line-clamp-1">
+                Optimize Database Performance
+              </h3>
+              <div class="px-3 py-1.5 bg-white rounded-md line-clamp-2">
+                Analyze query performance and implement indexing strategies to
+                enhance database efficiency.
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xs">Deadline</span>
+                  <p class="font-medium">30 March 2025</p>
+                </div>
+                <button
+                  class="btn data-[complete=true]:bg-blue-600/50 data-[complete=true]:pointer-events-none"
+                  data-complete="false"
+                >
+                  Completed
+                </button>
+              </div>
+            </li>
+
+            <li class="bg-gray-100 p-4 space-y-4">
+              <div class="px-3 py-2 rounded-md bg-white text-sm w-fit">
+                WebInnovators
+              </div>
+              <h3 class="font-semibold text-xl line-clamp-1">
+                Redesign Landing Page
+              </h3>
+              <div class="px-3 py-1.5 bg-white rounded-md line-clamp-2">
+                Create a modern and responsive design for the landing page to
+                improve user engagement.
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xs">Deadline</span>
+                  <p class="font-medium">5 April 2025</p>
+                </div>
+                <button
+                  class="btn data-[complete=true]:bg-blue-600/50 data-[complete=true]:pointer-events-none"
+                  data-complete="false"
+                >
+                  Completed
+                </button>
+              </div>
+            </li>
+
+            <li class="bg-gray-100 p-4 space-y-4">
+              <div class="px-3 py-2 rounded-md bg-white text-sm w-fit">
+                AppMasters
+              </div>
+              <h3 class="font-semibold text-xl line-clamp-1">
+                Develop Mobile App Prototype
+              </h3>
+              <div class="px-3 py-1.5 bg-white rounded-md line-clamp-2">
+                Build a functional prototype of the mobile application for
+                initial user testing.
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xs">Deadline</span>
+                  <p class="font-medium">10 April 2025</p>
+                </div>
+                <button
+                  class="btn data-[complete=true]:bg-blue-600/50 data-[complete=true]:pointer-events-none"
+                  data-complete="false"
+                >
+                  Completed
+                </button>
+              </div>
+            </li>
+
+            <li class="bg-gray-100 p-4 space-y-4">
+              <div class="px-3 py-2 rounded-md bg-white text-sm w-fit">
+                CloudSync
+              </div>
+              <h3 class="font-semibold text-xl line-clamp-1">
+                Set Up CI/CD Pipeline
+              </h3>
+              <div class="px-3 py-1.5 bg-white rounded-md line-clamp-2">
+                Implement continuous integration and deployment pipeline using
+                Jenkins and Docker.
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xs">Deadline</span>
+                  <p class="font-medium">15 April 2025</p>
+                </div>
+                <button
+                  class="btn data-[complete=true]:bg-blue-600/50 data-[complete=true]:pointer-events-none"
+                  data-complete="false"
+                >
+                  Completed
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <aside
+        class="min-w-[260px] max-w-[260px] py-4 gap-4 hidden sm:flex flex-col items-center rounded-md bg-white"
+      >
+        <div class="flex items-center gap-3">
+          <img src="assets/activity.png" class="w-4" alt="Activity Log" />
+          <h4>Activity Log</h4>
+        </div>
+        <button class="btn" id="clear-task-button">Clear History</button>
+        <span class="border border-dashed block w-full border-gray-200"></span>
+        <ul id="activity-list" class="p-4 pt-0 flex flex-col gap-4"></ul>
+      </aside>
+    </main>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
