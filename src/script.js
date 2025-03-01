@@ -126,3 +126,10 @@ changeThemeButton.addEventListener("click", () => {
 
   document.body.classList.add(bgColors[randomIndex]);
 });
+
+const toggleActivityLog = () => {
+  const activitySidebar = document.getElementById("activity-sidebar");
+  const isOpen = activitySidebar.getAttribute("data-mobile-open") === "true";
+
+  activitySidebar.setAttribute("data-mobile-open", isOpen ? "false" : "true");
+};

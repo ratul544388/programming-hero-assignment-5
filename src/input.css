@@ -8,6 +8,6 @@
     @apply max-w-[1280px] mx-auto;
   }
   .btn {
-    @apply cursor-pointer bg-blue-600 text-white rounded-md h-10 px-4 flex items-center text-sm font-medium;
+    @apply cursor-pointer bg-blue-600 text-white rounded-md h-10 px-4 flex items-center text-sm font-medium hover:bg-blue-600/90 transition-colors;
   }
 }

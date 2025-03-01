@@ -16,13 +16,19 @@
       <a href="http://127.0.0.1:5500/src/index.html">
         <img src="assets/logo.png" alt="Logo" class="w-[200px]" />
       </a>
-      <div class="ml-auto flex items-center gap-6">
+      <div class="ml-auto flex items-center gap-3 sm:gap-6">
         <div
           class="bg-gray-100 rounded-full py-1.5 p-3 font-bold gap-2 flex items-center"
         >
           <img src="assets/checkbox.png" alt="Check box" class="w-4" />
           <span id="test-completed-count">0</span>
         </div>
+        <button
+          class="cursor-pointer sm:hidden hover:bg-gray-100 transition-colors p-2 rounded-full"
+          onclick="toggleActivityLog()"
+        >
+          <img src="assets/activity.png" alt="Activity" class="w-5" />
+        </button>
         <button
           id="change-theme-button"
           class="cursor-pointer"
@@ -221,8 +227,16 @@
         </section>
       </section>
       <aside
-        class="min-w-[260px] max-w-[260px] py-4 gap-4 hidden sm:flex flex-col items-center rounded-md bg-white"
+        id="activity-sidebar"
+        data-mobile-open="false"
+        class="fixed top-0 h-full overflow-y-auto right-0 translate-x-full sm:translate-x-0 data-[mobile-open=true]:translate-x-0 transition-all duration-300 ease-in-out sm:static min-w-[260px] max-w-[260px] py-4 gap-4 flex flex-col items-center rounded-md bg-white"
       >
+        <button
+          onclick="toggleActivityLog()"
+          class="p-2 sm:hidden rounded-full border shadow border-gray-100 hover:bg-gray-100 cursor-pointer absolute top-2 left-2"
+        >
+          <i data-lucide="x" class="size-5"></i>
+        </button>
         <div class="flex items-center gap-3">
           <img src="assets/activity.png" class="w-4" alt="Activity Log" />
           <h4>Activity Log</h4>
