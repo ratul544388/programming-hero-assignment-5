@@ -31,7 +31,7 @@ const updateActivity = (button) => {
 
   const taskName = taskItem.querySelector("h3").textContent;
 
-  const options = {
+  const formatter = new Intl.DateTimeFormat("en-GB", {
     day: "2-digit",
     month: "long",
     year: "numeric",
@@ -39,9 +39,7 @@ const updateActivity = (button) => {
     minute: "2-digit",
     second: "2-digit",
     hour12: true,
-  };
-
-  const formatter = new Intl.DateTimeFormat("en-GB", options);
+  });
   const formattedDate = formatter.format(new Date()).replace(",", "");
 
   const innerHtml = `You have completed the task <span class="font-bold"> ${taskName} </span> on ${formattedDate}`;
